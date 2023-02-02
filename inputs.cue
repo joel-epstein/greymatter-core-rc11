@@ -8,7 +8,7 @@ import (
 config: {
 	// Flags
 	// use Spire-based mTLS (ours or another)
-	spire: bool | *false @tag(spire,type=bool)
+	spire: bool | *true @tag(spire,type=bool)
 	// deploy our own server and agent
 	deploy_spire: bool | *spire @tag(use_spire,type=bool)
 	// if we're deploying into OpenShift, request extra permissions
@@ -38,7 +38,7 @@ mesh: meshv1.#Mesh & {
 	}
 	spec: {
 		install_namespace: string | *"greymatter"
-		watch_namespaces:  [...string] | *["default", "examples"]
+		watch_namespaces:  [...string] | *["default", "examples", "foobar-1", "foobar-2", "foobar-3", "foobar-4", "foobar-5", "foobar-6", "foobar-7", "foobar-8", "foobar-9", "foobar-10", "foobar-11", "foobar-12"]
 		images: {
 			proxy:       string | *"greymatter.jfrog.io/oci/greymatter-proxy:1.8.6"
 			catalog:     string | *"greymatter.jfrog.io/oci/greymatter-catalog:3.0.12"

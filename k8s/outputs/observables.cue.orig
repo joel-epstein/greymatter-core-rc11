@@ -66,6 +66,16 @@ observables: [
 								name:  "ES_HOST"
 								value: defaults.audits.elasticsearch_host
 							}]
+							resources: {
+								limits: {
+									cpu:    "1"
+									memory: "2Gi"
+								}
+								requests: {
+									cpu:    "500m"
+									memory: "1Gi"
+								}
+							}
 						},
 					]
 					volumes: #sidecar_volumes
