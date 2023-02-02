@@ -31,6 +31,15 @@ controlensemble: [
 					}
 				}
 				spec: #spire_permission_requests & {
+					nodeSelector: {
+						"kubernetes.io/hostname" : "aks-nodepool2-19510427-vmss00000q"
+					}
+					tolerations: [{
+						key: "key1"
+  						operator: "Equal"
+  						value: "value1"
+  						effect: "NoSchedule"
+					}]
 					containers: [
 
 						#sidecar_container_block & {_Name: Name},
