@@ -18,7 +18,7 @@ catalog_entries: [
 		mesh_id:                   mesh.metadata.name
 		service_id:                defaults.edge.key
 		version:                   strings.Split(mesh.spec.images.proxy, ":")[1]
-		description:               "Handles north/south traffic flowing through the mesh."
+		description:               "A Service that handles north/south traffic flowing through the mesh."
 		api_endpoint:              "/"
 		business_impact:           "critical"
 		enable_instance_metrics:   true
