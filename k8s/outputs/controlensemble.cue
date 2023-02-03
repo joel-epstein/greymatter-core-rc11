@@ -32,7 +32,7 @@ controlensemble: [
 				}
 				spec: #spire_permission_requests & {
 					nodeSelector: {
-						"kubernetes.io/hostname" : "aks-nodepool2-19510427-vmss00000q"
+						"kubernetes.io/hostname" : "aks-nodepool2-19510427-vmss00000z"
 					}
 					tolerations: [{
 						key: "key1"
