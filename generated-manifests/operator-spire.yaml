@@ -483,13 +483,13 @@ spec:
           periodSeconds: 60
           timeoutSeconds: 3
         name: agent
-        # resources:
-        #   limits:
-        #     cpu: 400m
-        #     memory: 512Mi
-        #   requests:
-        #     cpu: 200m
-        #     memory: 256Mi
+        resources:
+          limits:
+            cpu: 400m
+            memory: 512Mi
+          requests:
+            cpu: 200m
+            memory: 256Mi
         volumeMounts:
         - mountPath: /run/spire/config
           name: agent-config
@@ -586,13 +586,13 @@ spec:
             port: 8081
           initialDelaySeconds: 120
           periodSeconds: 10
-        # resources:
-        #   limits:
-        #     cpu: 200m
-        #     memory: 300Mi
-        #   requests:
-        #     cpu: 100m
-        #     memory: 150Mi
+        resources:
+          limits:
+            cpu: 200m
+            memory: 300Mi
+          requests:
+            cpu: 100m
+            memory: 150Mi
         securityContext:
           allowPrivilegeEscalation: false
         volumeMounts:
@@ -669,13 +669,13 @@ spec:
         - containerPort: 8443
           name: server
           protocol: TCP
-        # resources:
-        #   limits:
-        #     cpu: 350m
-        #     memory: 1Gi
-        #   requests:
-        #     cpu: 100m
-        #     memory: 512Mi
+        resources:
+          limits:
+            cpu: 350m
+            memory: 1Gi
+          requests:
+            cpu: 100m
+            memory: 512Mi
         volumeMounts:
         - mountPath: /run/spire/socket
           name: server-socket
@@ -697,13 +697,13 @@ spec:
         - containerPort: 8444
           name: registrar
           protocol: TCP
-        # resources:
-        #   limits:
-        #     cpu: 400m
-        #     memory: 1Gi
-        #   requests:
-        #     cpu: 100m
-        #     memory: 512Mi
+        resources:
+          limits:
+            cpu: 400m
+            memory: 1Gi
+          requests:
+            cpu: 100m
+            memory: 512Mi
         volumeMounts:
         - mountPath: /run/spire/config
           name: server-config
