@@ -83,6 +83,9 @@ jwt_security: [
 									}
 								},
 							]
+							resources: {
+								requests: {cpu: "50m", memory: "128Mi"}
+							}
 							imagePullPolicy: defaults.image_pull_policy
 						},
 					]
